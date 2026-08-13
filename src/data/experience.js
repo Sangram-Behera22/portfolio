@@ -3,10 +3,10 @@ export const experience = [
     id: "exp-01",
     period: "Nov 2023 — Present",
     role: "Software Developer",
-    company: "SAItellect Solutions",
+    company: "SAIntellect Solutions",
     focus: "Backend & Full Stack Development",
     points: [
-      "Developed and maintained robust backend services utilizing Laravel, PHP, and Node.js.",
+      "Developed and maintained robust backend services utilizing Laravel, PHP, Node.js. and Express.js.",
       "Designed and built RESTful APIs to power complex web platforms and mobile applications.",
       "Modeled and optimized database architectures using MySQL and PostgreSQL.",
       "Implemented secure authentication, authorization, and seamless third-party integrations.",
@@ -17,7 +17,7 @@ export const experience = [
     id: "exp-02",
     period: "Nov 2022 — Nov 2023",
     role: "Junior Software Developer",
-    company: "SAItellect Solutions",
+    company: "SAIntellect Solutions",
     focus: "Full Stack Foundations & API Development",
     points: [
       "Started professional career building scalable full-stack features with PHP and JavaScript.",

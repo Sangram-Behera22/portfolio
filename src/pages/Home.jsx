@@ -6,13 +6,15 @@ const FLOATING_BADGES = [
   { label: "Node.js", className: "left-[-8%] top-[10%]", delay: 0 },
   { label: "TypeScript", className: "right-[-6%] top-[22%]", delay: 0.4 },
   { label: "PostgreSQL", className: "left-[-4%] bottom-[16%]", delay: 0.8 },
-  { label: "Docker", className: "right-[-2%] bottom-[4%]", delay: 1.2 },
+  { label: "Laravel", className: "right-[25%] bottom-[-30%]", delay: 1.2 },
+  { label: "PHP", className: "left-[25%] bottom-[-30%]", delay: 1.4 },
+  { label: "MySQL", className: "right-[-2%] bottom-[4%]", delay: 1.8 },
 ];
 
 export default function Home() {
   return (
     <div className="no-scrollbar h-full w-full overflow-y-auto">
-      <div className="mx-auto flex max-w-[1400px] flex-col justify-center gap-10 px-5 py-10 md:px-10 lg:flex-row lg:items-center lg:gap-16 lg:px-16 lg:py-10">
+      <div className="mx-auto flex flex-col justify-center gap-10 px-5 py-10 md:px-10 lg:flex-row lg:items-center lg:gap-16 lg:px-16 lg:py-10">
         {/* Left: intro */}
         <div className="flex w-full max-w-xl flex-col md:w-1/2">
           <motion.span
@@ -49,7 +51,7 @@ export default function Home() {
             className="mt-5 max-w-md text-[15px] leading-relaxed text-muted"
           >
             I build scalable backend systems, REST APIs and modern web
-            applications — with 3.5+ years turning complex requirements into
+            applications — with 3.8+ years turning complex requirements into
             reliable software.
           </motion.p>
 

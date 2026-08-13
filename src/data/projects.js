@@ -14,7 +14,7 @@ export const projects = [
     name: "RingCompany",
     description:
       "An e-commerce platform allowing customers to design custom rings, featuring a robust admin panel to manage orders and the complete design pipeline.",
-    tech: ["Laravel", "PHP", "MySQL", "JavaScript"],
+    tech: ["Laravel", "PHP", "MySQL", "TypeScript"],
     demo: "#",
     github: "#",
     accent: "violet",

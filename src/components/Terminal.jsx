@@ -4,9 +4,10 @@ import { motion } from "motion/react";
 const LINES = [
   { cmd: "whoami", out: "sangram-behera · full-stack developer" },
   { cmd: "node -v", out: "v22.23.2" },
+  { cmd: "php -v", out: "v8.3.9" },
   {
     cmd: "cat stack.json",
-    out: '{ "backend": ["Node.js","TypeScript","Fastify"], "db": ["PostgreSQL","Redis"] }',
+    out: '{ "backend": ["Node.js","TypeScript","Fastify","PHP","Laravel"], "db": ["PostgreSQL","Redis","MySQL","MongoDB"] }',
   },
   { cmd: "git log --oneline -1", out: "8f3a21c refactor: scale API gateway to 10k rps" },
 ];
