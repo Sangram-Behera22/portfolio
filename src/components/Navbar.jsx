@@ -19,7 +19,7 @@ export default function Navbar() {
   return (
     <header className="relative z-50 shrink-0 border-b border-border/80">
       <div className="glass absolute inset-0 -z-10" />
-      <div className="mx-auto flex h-16 md:h-[72px] max-w-[1400px] items-center justify-between px-5 md:px-10">
+      <div className="mx-auto flex h-16 md:h-[72px] items-center justify-between px-5 md:px-10">
         <NavLink
           to="/"
           onClick={() => setOpen(false)}
