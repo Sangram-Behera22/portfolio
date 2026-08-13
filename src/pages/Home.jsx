@@ -14,7 +14,7 @@ const FLOATING_BADGES = [
 export default function Home() {
   return (
     <div className="no-scrollbar h-full w-full overflow-y-auto">
-      <div className="mx-auto flex flex-col justify-center gap-10 px-5 py-10 md:px-10 lg:flex-row lg:items-center lg:gap-16 lg:px-16 lg:py-10">
+      <div className="mx-auto flex  max-w-[1400px] flex-col justify-center gap-10 px-5 py-10 md:px-10 lg:flex-row lg:items-center lg:gap-16 lg:px-16 lg:py-10">
         {/* Left: intro */}
         <div className="flex w-full max-w-xl flex-col md:w-1/2">
           <motion.span
