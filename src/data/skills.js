@@ -21,7 +21,7 @@ export const skillCategories = [
     id: "database",
     label: "Database",
     note: "Storage & caching",
-    skills: ["PostgreSQL", "MySQL", "Redis", "Prisma"],
+    skills: ["PostgreSQL", "MySQL", "Redis", "MongoDB"],
   },
   {
     id: "frontend",

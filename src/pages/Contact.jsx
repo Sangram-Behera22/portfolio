@@ -32,7 +32,7 @@ export default function Contact() {
         "template_d7p5tyi",
         {
           name: form.name,
-          email: 'mail.sbsangram@gmail.com',
+          email: form.email,
           message: form.message,
         },
         {
