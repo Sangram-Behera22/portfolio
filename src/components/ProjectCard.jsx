@@ -1,10 +1,10 @@
 import { motion } from "motion/react";
-import { ExternalLink, Github, Terminal as TerminalIcon } from "lucide-react";
+import { ArrowUpRight, Github, Terminal as TerminalIcon } from "lucide-react";
 
 const accentMap = {
-  violet: "from-violet/30 via-violet/0",
-  blue: "from-blue/30 via-blue/0",
-  cyan: "from-cyan/30 via-cyan/0",
+  violet: "from-violet/35 via-violet/15 to-transparent",
+  blue: "from-blue/35 via-blue/15 to-transparent",
+  cyan: "from-cyan/35 via-cyan/15 to-transparent",
 };
 
 const dotMap = {
@@ -15,60 +15,65 @@ const dotMap = {
 
 export default function ProjectCard({ project, delay = 0 }) {
   return (
-    <motion.div
+    <motion.article
       initial={{ opacity: 0, y: 16 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4, delay, ease: [0.22, 1, 0.36, 1] }}
-      whileHover={{ y: -4 }}
-      className="group relative flex flex-col overflow-hidden rounded-2xl border border-border bg-card/50 transition-colors hover:border-violet/40"
+      transition={{ duration: 0.42, delay, ease: [0.22, 1, 0.36, 1] }}
+      whileHover={{ y: -5 }}
+      className="group relative flex h-full flex-col overflow-hidden rounded-[28px] border border-border bg-card/70 shadow-[var(--shadow-card)] transition-all duration-300 hover:border-violet/40"
     >
-      {/* glow on hover */}
       <div
-        className={`pointer-events-none absolute -inset-px opacity-0 bg-gradient-to-br ${accentMap[project.accent]} to-transparent transition-opacity duration-500 group-hover:opacity-100`}
+        className={`pointer-events-none absolute inset-x-0 top-0 h-28 bg-gradient-to-br ${accentMap[project.accent]} opacity-90`}
       />
 
-      {/* preview */}
-      <div className="relative flex h-28 items-center justify-between border-b border-border-soft bg-bg-soft px-4 grid-backdrop">
-        <span className={`h-1.5 w-1.5 rounded-full ${dotMap[project.accent]}`} />
-        <TerminalIcon size={26} className="text-faint transition-colors group-hover:text-muted" strokeWidth={1.5} />
+      <div className="relative flex h-28 items-center justify-between border-b border-border-soft bg-bg-soft/80 px-4 backdrop-blur-sm">
+        <div className="flex items-center gap-2">
+          <span className={`h-2.5 w-2.5 rounded-full ${dotMap[project.accent]}`} />
+          <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-faint">Project</span>
+        </div>
+        <TerminalIcon size={24} className="text-faint transition-colors group-hover:text-muted" strokeWidth={1.5} />
       </div>
 
       <div className="relative flex flex-1 flex-col p-4 md:p-5">
-        <h3 className="font-display text-base font-semibold text-ink">{project.name}</h3>
-        <p className="mt-1.5 text-[13px] leading-relaxed text-muted line-clamp-3">
-          {project.description}
-        </p>
+        <div className="mb-3 flex items-center justify-between gap-3">
+          <h3 className="font-display text-lg font-semibold text-ink">{project.name}</h3>
+          <span className="rounded-full border border-border-soft bg-bg-soft px-2 py-1 font-mono text-[9px] uppercase tracking-[0.14em] text-faint">
+            {project.type || "web app"}
+          </span>
+        </div>
 
-        <div className="mt-3 flex flex-wrap gap-1.5">
+        <p className="text-[13px] leading-relaxed text-muted">{project.description}</p>
+
+        <div className="mt-4 flex flex-wrap gap-2">
           {project.tech.map((t) => (
             <span
               key={t}
-              className="rounded-md border border-border-soft bg-bg-soft px-2 py-0.5 font-mono text-[10px] text-muted"
+              className="rounded-full border border-border-soft bg-bg-soft px-2.5 py-1 font-mono text-[10px] text-muted"
             >
               {t}
             </span>
           ))}
         </div>
 
-        <div className="mt-auto flex items-center gap-3 pt-4 font-mono text-[12px]">
+        <div className="mt-auto flex items-center justify-between gap-3 pt-5">
           <a
             href={project.demo}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-1.5 text-ink transition-colors hover:text-violet"
+            className="inline-flex items-center gap-1.5 font-mono text-[12px] text-ink transition-colors hover:text-violet"
           >
-            <ExternalLink size={13} /> Live Demo
+            Live demo <ArrowUpRight size={13} />
           </a>
           <a
             href={project.github}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-1.5 text-muted transition-colors hover:text-ink"
+            className="inline-flex items-center gap-1.5 font-mono text-[12px] text-muted transition-colors hover:text-ink"
           >
             <Github size={13} /> GitHub
           </a>
         </div>
       </div>
-    </motion.div>
+    </motion.article>
   );
 }

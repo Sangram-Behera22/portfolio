@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Routes, Route, useLocation, Navigate } from "react-router-dom";
 import { AnimatePresence } from "motion/react";
 import { Github, Linkedin, Mail } from "lucide-react";
@@ -26,10 +27,20 @@ const ROUTE_LABELS = {
 export default function App() {
   const location = useLocation();
   const label = ROUTE_LABELS[location.pathname] ?? "404";
+  const [isDark, setIsDark] = useState(() => {
+    const saved = localStorage.getItem("portfolio-theme");
+    if (saved) return saved === "dark";
+    return window.matchMedia("(prefers-color-scheme: dark)").matches;
+  });
+
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", isDark ? "dark" : "light");
+    localStorage.setItem("portfolio-theme", isDark ? "dark" : "light");
+  }, [isDark]);
 
   return (
-    <div className="flex h-[100dvh] w-full flex-col bg-bg text-ink overflow-x-hidden">
-      <Navbar />
+    <div className="flex h-[100dvh] w-full flex-col overflow-x-hidden bg-bg text-ink transition-colors duration-300">
+      <Navbar isDark={isDark} onToggleTheme={() => setIsDark((prev) => !prev)} />
 
       <main className="relative flex-1 overflow-y-auto overflow-x-hidden">
         <AnimatePresence initial={false}>
@@ -46,7 +57,7 @@ export default function App() {
         </AnimatePresence>
       </main>
 
-      <footer className="hidden md:flex h-10 shrink-0 items-center justify-between border-t border-border bg-bg-soft px-10 font-mono text-[11px] text-faint">
+      <footer className="hidden h-10 shrink-0 items-center justify-between border-t border-border bg-bg-soft px-10 font-mono text-[11px] text-faint md:flex">
         <span>© 2026 Sangram Behera</span>
         <span className="text-muted">~/{label}</span>
         <div className="flex items-center gap-4">
