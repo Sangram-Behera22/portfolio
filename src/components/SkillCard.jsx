@@ -9,11 +9,11 @@ export default function SkillCard({ category, delay = 0 }) {
       whileHover={{ y: -4 }}
       className="group flex h-full flex-col rounded-3xl border border-border bg-card/70 p-5 shadow-[0_20px_45px_rgba(10,10,20,0.08)] transition-all duration-300 hover:border-violet/45 hover:bg-card"
     >
-      <div className="flex items-start justify-between gap-3">
+      <div className="flex flex-wrap items-start justify-between gap-3">
         <span className={`inline-flex rounded-full border px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.14em] ${category.accent}`}>
           {category.label}
         </span>
-        <span className="font-mono text-[10px] text-faint">{category.note}</span>
+        <span className="font-mono text-[10px] text-faint sm:text-right">{category.note}</span>
       </div>
 
       <h3 className="mt-4 font-display text-lg font-semibold text-ink">{category.title}</h3>

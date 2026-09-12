@@ -14,7 +14,7 @@ export default function PageTransition({ children }) {
       animate="animate"
       exit="exit"
       transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-      className="absolute inset-0 h-full w-full"
+      className="absolute inset-0 h-full min-w-0 w-full overflow-x-hidden"
     >
       {children}
     </motion.div>

@@ -5,7 +5,7 @@ const timeline = [...experience].reverse();
 
 export default function Experience() {
   return (
-    <div className="no-scrollbar overflow-y-auto">
+    <div className="no-scrollbar h-full w-full overflow-y-auto">
       <div className="mx-auto flex max-w-[1400px] flex-col gap-8 px-5 py-10 md:px-10 lg:px-16">
         <div>
           <motion.span
@@ -51,14 +51,14 @@ export default function Experience() {
                 </div>
 
                 <div className="rounded-[24px] border border-border bg-card/70 p-4 shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-1 hover:border-violet/40 md:p-5">
-                  <div className="flex items-start justify-between gap-3">
+                  <div className="flex flex-wrap items-start justify-between gap-3">
                     <div>
                       <h3 className="font-display text-[15px] font-semibold text-ink md:text-[17px]">
                         {item.role}
                       </h3>
                       <p className="mt-1 font-mono text-[11px] text-violet">{item.company}</p>
                     </div>
-                    <span className="rounded-full border border-border-soft bg-bg-soft px-2 py-1 font-mono text-[9px] uppercase tracking-[0.12em] text-faint">
+                    <span className="max-w-full rounded-full border border-border-soft bg-bg-soft px-2 py-1 font-mono text-[9px] uppercase tracking-[0.12em] text-faint">
                       {item.focus}
                     </span>
                   </div>

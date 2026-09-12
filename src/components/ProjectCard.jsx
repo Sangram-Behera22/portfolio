@@ -35,8 +35,8 @@ export default function ProjectCard({ project, delay = 0 }) {
       </div>
 
       <div className="relative flex flex-1 flex-col p-4 md:p-5">
-        <div className="mb-3 flex items-center justify-between gap-3">
-          <h3 className="font-display text-lg font-semibold text-ink">{project.name}</h3>
+        <div className="mb-3 flex flex-wrap items-center justify-between gap-3">
+          <h3 className="min-w-0 font-display text-lg font-semibold text-ink">{project.name}</h3>
           <span className="rounded-full border border-border-soft bg-bg-soft px-2 py-1 font-mono text-[9px] uppercase tracking-[0.14em] text-faint">
             {project.type || "web app"}
           </span>
@@ -56,22 +56,22 @@ export default function ProjectCard({ project, delay = 0 }) {
         </div>
 
         <div className="mt-auto flex items-center justify-between gap-3 pt-5">
-          <a
+          {/* <a
             href={project.demo}
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center gap-1.5 font-mono text-[12px] text-ink transition-colors hover:text-violet"
           >
             Live demo <ArrowUpRight size={13} />
-          </a>
-          <a
+          </a> */}
+          {/* <a
             href={project.github}
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center gap-1.5 font-mono text-[12px] text-muted transition-colors hover:text-ink"
           >
             <Github size={13} /> GitHub
-          </a>
+          </a> */}
         </div>
       </div>
     </motion.article>

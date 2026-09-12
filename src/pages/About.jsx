@@ -36,7 +36,7 @@ const TECH_STACK = [
 export default function About() {
   return (
     <div className="no-scrollbar h-full w-full overflow-y-auto">
-      <div className="mx-auto flex max-w-[1400px] flex-col justify-center gap-8 px-5 py-10 md:px-10 lg:flex-row lg:items-start lg:gap-12 lg:px-16 lg:py-12">
+      <div className="mx-auto flex max-w-[1400px] flex-col justify-center gap-8 px-5 py-10 md:px-10 lg:flex-row lg:items-center lg:gap-12 lg:px-16 lg:py-10">
         <div className="w-full lg:w-[58%]">
           <motion.span
             initial={{ opacity: 0, y: 8 }}

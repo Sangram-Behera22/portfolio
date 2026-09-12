@@ -10,38 +10,6 @@ import {
 import Button from "../components/Button.jsx";
 import Terminal from "../components/Terminal.jsx";
 
-const FLOATING_BADGES = [
-  {
-    label: "Node.js",
-    className: "left-0 top-[8%]",
-    delay: 0,
-  },
-  {
-    label: "TypeScript",
-    className: "right-0 top-[18%]",
-    delay: 0.4,
-  },
-  {
-    label: "PostgreSQL",
-    className: "left-[4%] bottom-[20%]",
-    delay: 0.8,
-  },
-  {
-    label: "Laravel",
-    className: "right-[8%] bottom-[10%]",
-    delay: 1.2,
-  },
-  {
-    label: "PHP",
-    className: "left-[22%] bottom-[4%]",
-    delay: 1.4,
-  },
-  {
-    label: "MySQL",
-    className: "right-[24%] top-[5%]",
-    delay: 1.8,
-  },
-];
 
 const HIGHLIGHTS = [
   {
@@ -65,12 +33,12 @@ const HIGHLIGHTS = [
 export default function Home() {
   return (
     <div className="no-scrollbar h-full w-full overflow-y-auto">
-      <main className="mx-auto flex min-h-full w-full max-w-[1400px] items-center px-5 py-10 sm:px-7 md:px-10 lg:px-12 xl:px-16">
-        <div className="grid w-full items-center gap-12 lg:grid-cols-[minmax(0,0.95fr)_minmax(480px,1.05fr)] xl:gap-16">
+      <main className="mx-auto flex min-h-full w-full max-w-[1400px] min-w-0 items-center px-5 py-10 sm:px-7 md:px-10 lg:px-12 xl:px-16">
+        <div className="grid w-full min-w-0 items-center gap-10 lg:grid-cols-2 lg:gap-12 xl:gap-16">
           {/* =========================================================
               LEFT — HERO CONTENT
           ========================================================= */}
-          <section className="max-w-2xl">
+          <section className="min-w-0 max-w-2xl">
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
@@ -78,10 +46,10 @@ export default function Home() {
             >
               {/* Eyebrow */}
               <div className="flex items-center gap-3">
-                <span className="h-px w-7 bg-violet" />
-
+                {/* <span className="h-px w-7 bg-violet" /> */}
+               
                 <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-violet sm:text-xs">
-                  Full Stack Developer
+                  // Full Stack Developer
                 </span>
               </div>
 
@@ -104,7 +72,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.12 }}
-                className="mt-6 max-w-xl font-display text-xl font-medium leading-snug tracking-tight text-ink sm:text-2xl md:text-[27px]"
+                className="mt-6 max-w-xl break-words font-display text-xl font-medium leading-snug tracking-tight text-ink sm:text-2xl md:text-[27px]"
               >
                 Building scalable web applications, APIs, and cloud systems.
               </motion.h2>
@@ -114,7 +82,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.18 }}
-                className="mt-5 max-w-xl text-[14px] leading-7 text-muted sm:text-[15px]"
+                className="mt-5 max-w-xl break-words text-[14px] leading-7 text-muted sm:text-[15px]"
               >
                 I&apos;m a backend-oriented full stack developer with around
                 4 years of experience building web applications, REST APIs,
@@ -144,7 +112,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
-                className="mt-9 grid grid-cols-2 gap-2.5 sm:grid-cols-4"
+                className="mt-9 grid grid-cols-1 gap-2.5 min-[360px]:grid-cols-2 md:grid-cols-4"
               >
                 {HIGHLIGHTS.map(({ label, icon: Icon }) => (
                   <div
@@ -176,7 +144,7 @@ export default function Home() {
               delay: 0.12,
               ease: [0.22, 1, 0.36, 1],
             }}
-            className="relative flex min-h-[390px] items-center justify-center sm:min-h-[460px] lg:min-h-[540px]"
+            className="relative min-w-0 flex min-h-[390px] items-center justify-center pb-8 sm:min-h-[460px] lg:min-h-[540px] lg:pb-0"
           >
             {/* Ambient glow */}
             <div className="pointer-events-none absolute left-1/2 top-1/2 h-[65%] w-[65%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-violet/10 blur-[90px]" />
@@ -196,44 +164,10 @@ export default function Home() {
               }}
             />
 
-            {/* Floating badges */}
-            {/* {FLOATING_BADGES.map((badge) => (
-              <motion.div
-                key={badge.label}
-                initial={{
-                  opacity: 0,
-                  scale: 0.9,
-                }}
-                animate={{
-                  opacity: 1,
-                  scale: 1,
-                  y: [0, -7, 0],
-                }}
-                transition={{
-                  opacity: {
-                    duration: 0.45,
-                    delay: 0.45 + badge.delay * 0.12,
-                  },
-                  scale: {
-                    duration: 0.45,
-                    delay: 0.45 + badge.delay * 0.12,
-                  },
-                  y: {
-                    duration: 4,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                    delay: badge.delay,
-                  },
-                }}
-                className={`absolute z-20 hidden rounded-xl border border-border/70 bg-card/80 px-3 py-2 font-mono text-[10px] text-muted shadow-xl backdrop-blur-md lg:block ${badge.className}`}
-              >
-                <span className="mr-2 inline-block h-1.5 w-1.5 rounded-full bg-violet align-middle" />
-                {badge.label}
-              </motion.div>
-            ))} */}
+         
 
             {/* Terminal wrapper */}
-            <div className="relative z-10 w-full max-w-[590px]">
+            <div className="relative z-10 min-w-0 w-full max-w-[590px]">
               {/* Terminal glow */}
               <div className="absolute -inset-5 rounded-[34px] bg-gradient-to-br from-violet/15 via-blue/10 to-cyan/10 blur-2xl" />
 
@@ -251,7 +185,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.45, delay: 0.8 }}
-              className="absolute bottom-0 left-1/2 z-30 flex -translate-x-1/2 items-center gap-2 rounded-full border border-border/70 bg-card/85 px-3 py-2 font-mono text-[9px] text-muted shadow-xl backdrop-blur-md sm:text-[10px]"
+              className="absolute -bottom-3 sm:bottom-1 left-1/2 z-30 flex max-w-[calc(100%-2rem)] -translate-x-1/2 items-center gap-2 whitespace-nowrap rounded-full border border-border/70 bg-card/85 px-3 py-2 font-mono text-[9px] text-muted shadow-xl backdrop-blur-md sm:text-[10px]"
             >
               <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-400" />
               Available for interesting work

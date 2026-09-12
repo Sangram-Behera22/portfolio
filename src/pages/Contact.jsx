@@ -59,7 +59,7 @@ export default function Contact() {
   return (
     <div className="no-scrollbar h-full w-full overflow-y-auto bg-gradient-to-b from-bg via-bg to-bg/95">
      
-      <div className="mx-auto w-full max-w-[1400px] gap-8 px-5 py-10 md:px-10 lg:px-16 lg:pb-20">
+      <div className="mx-auto w-full max-w-[1400px] px-5 py-8 sm:py-10 md:px-10 lg:px-16">
         <div className="grid items-start gap-8 lg:grid-cols-[minmax(0,1.15fr)_minmax(360px,0.85fr)] lg:gap-12 xl:gap-16">
           {/* Left column */}
           <div>
@@ -128,7 +128,7 @@ export default function Contact() {
                   LinkedIn
                 </a>
 
-                <a
+                {/* <a
                   href="https://github.com/"
                   target="_blank"
                   rel="noreferrer"
@@ -136,12 +136,12 @@ export default function Contact() {
                 >
                   <Github size={15} />
                   GitHub
-                </a>
+                </a> */}
               </div>
             </motion.div>
 
             {/* Contact highlights */}
-            <div className="mt-8 grid gap-3 sm:grid-cols-3 lg:mt-10">
+            <div className="mt-8 grid grid-cols-3 gap-2.5 sm:gap-3 lg:mt-10">
               {[
                 {
                   icon: Clock3,
@@ -170,15 +170,15 @@ export default function Contact() {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: 0.15 + index * 0.06 }}
-                  className="group rounded-2xl border border-border/40 bg-card/20 p-4 transition-colors hover:border-border/70 hover:bg-card/35"
+                  className="group min-w-0 rounded-2xl border border-border/40 bg-card/20 p-3 transition-colors hover:border-border/70 hover:bg-card/35 sm:p-4"
                 >
                   <div className={`flex h-9 w-9 items-center justify-center rounded-xl ${bgClass}`}>
                     <Icon size={16} className={iconClass} />
                   </div>
-                  <p className="mt-4 font-mono text-[9px] uppercase tracking-[0.16em] text-faint">
+                  <p className="mt-3 break-words font-mono text-[8px] uppercase tracking-[0.12em] text-faint sm:mt-4 sm:text-[9px] sm:tracking-[0.16em]">
                     {title}
                   </p>
-                  <p className="mt-1 text-[12px] font-medium text-ink sm:text-[13px]">
+                  <p className="mt-1 break-words text-[10px] font-medium leading-4 text-ink sm:text-[13px]">
                     {text}
                   </p>
                 </motion.div>

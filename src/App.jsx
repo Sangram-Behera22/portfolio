@@ -11,7 +11,6 @@ import About from "./pages/About.jsx";
 import Skills from "./pages/Skills.jsx";
 import Experience from "./pages/Experience.jsx";
 import Projects from "./pages/Projects.jsx";
-import Architecture from "./pages/Architecture.jsx";
 import Contact from "./pages/Contact.jsx";
 
 const ROUTE_LABELS = {
@@ -20,7 +19,6 @@ const ROUTE_LABELS = {
   "/skills": "skills",
   "/experience": "experience",
   "/projects": "projects",
-  "/architecture": "architecture",
   "/contact": "contact",
 };
 
@@ -42,7 +40,7 @@ export default function App() {
     <div className="flex h-[100dvh] w-full flex-col overflow-x-hidden bg-bg text-ink transition-colors duration-300">
       <Navbar isDark={isDark} onToggleTheme={() => setIsDark((prev) => !prev)} />
 
-      <main className="relative flex-1 overflow-y-auto overflow-x-hidden">
+      <main className="relative min-h-0 flex-1 overflow-y-auto overflow-x-hidden">
         <AnimatePresence initial={false}>
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<PageTransition><Home /></PageTransition>} />
@@ -50,20 +48,19 @@ export default function App() {
             <Route path="/skills" element={<PageTransition><Skills /></PageTransition>} />
             <Route path="/experience" element={<PageTransition><Experience /></PageTransition>} />
             <Route path="/projects" element={<PageTransition><Projects /></PageTransition>} />
-            <Route path="/architecture" element={<PageTransition><Architecture /></PageTransition>} />
             <Route path="/contact" element={<PageTransition><Contact /></PageTransition>} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </AnimatePresence>
       </main>
 
-      <footer className="hidden h-10 shrink-0 items-center justify-between border-t border-border bg-bg-soft px-10 font-mono text-[11px] text-faint md:flex">
+      <footer className="flex min-h-10 shrink-0  items-center justify-between gap-2 border-t border-border bg-bg-soft px-5 py-3 text-center font-mono text-[10px] text-faint md:h-10 md:flex-row md:justify-between md:px-10 md:py-0 md:text-left md:text-[11px]">
         <span>© 2026 Sangram Behera</span>
         <span className="text-muted">~/{label}</span>
         <div className="flex items-center gap-4">
-          <a href="https://github.com/" target="_blank" rel="noreferrer" className="transition-colors hover:text-ink" aria-label="GitHub">
+          {/* <a href="https://github.com/" target="_blank" rel="noreferrer" className="transition-colors hover:text-ink" aria-label="GitHub">
             <Github size={13} />
-          </a>
+          </a> */}
           <a href="https://www.linkedin.com/in/sangram-behera22" target="_blank" rel="noreferrer" className="transition-colors hover:text-ink" aria-label="LinkedIn">
             <Linkedin size={13} />
           </a>

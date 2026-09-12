@@ -127,7 +127,7 @@ export default function Terminal() {
         delay: 0.2,
         ease: [0.22, 1, 0.36, 1],
       }}
-      className="relative w-full overflow-hidden rounded-2xl border border-border/70 bg-[#09090b]/90 shadow-2xl shadow-black/30 backdrop-blur-xl"
+      className="relative w-full overflow-hidden rounded-2xl border border-border/70 bg-card/95 text-ink shadow-[0_20px_45px_rgba(15,23,42,0.1)] backdrop-blur-xl"
     >
       {/* Top glow */}
       <div className="pointer-events-none absolute inset-x-10 top-0 h-px bg-gradient-to-r from-transparent via-violet/60 to-transparent" />
@@ -135,7 +135,7 @@ export default function Terminal() {
       {/* =========================================================
           TERMINAL HEADER
       ========================================================= */}
-      <div className="flex h-11 items-center border-b border-border/60 bg-white/[0.015] px-4">
+      <div className="flex h-11 items-center border-b border-border/60 bg-bg-soft/80 px-4">
         <div className="flex items-center gap-1.5">
           <span className="h-2.5 w-2.5 rounded-full bg-[#ff5f57]" />
           <span className="h-2.5 w-2.5 rounded-full bg-[#febc2e]" />
@@ -176,12 +176,12 @@ export default function Terminal() {
 
         <div className="relative z-10 h-full overflow-hidden font-mono text-[11px] leading-6 sm:text-[12px]">
           {/* History */}
-          <div className="space-y-3 opacity-45">
+          <div className="space-y-3 opacity-95">
             {history.map((line) => (
               <div key={line.key} className="min-w-0">
                 <Prompt>{line.cmd}</Prompt>
 
-                <div className="mt-0.5 truncate pl-[26px] text-muted">
+                <div className="mt-0.5 truncate pl-[26px] text-ink/75">
                   {line.out}
                 </div>
               </div>
@@ -216,11 +216,11 @@ export default function Terminal() {
               <div className="mt-1 flex min-w-0 items-start gap-2 pl-[26px]">
                 <span className="text-emerald-400">✓</span>
 
-                <span className="min-w-0 break-words text-muted">
+                <span className="min-w-0 break-words text-ink/80">
                   {outText}
 
                   {phase === "out" && (
-                    <span className="ml-0.5 animate-pulse text-muted">
+                    <span className="ml-0.5 animate-pulse text-ink/70">
                       ▍
                     </span>
                   )}
@@ -244,7 +244,7 @@ export default function Terminal() {
       {/* =========================================================
           FOOTER
       ========================================================= */}
-      <div className="flex items-center justify-between border-t border-border/50 bg-white/[0.015] px-4 py-2.5 sm:px-5">
+      <div className="flex items-center justify-between border-t border-border/50 bg-bg-soft/80 px-4 py-2.5 sm:px-5">
         <span className="font-mono text-[9px] text-faint">
           ~/projects/backend
         </span>

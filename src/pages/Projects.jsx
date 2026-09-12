@@ -4,7 +4,7 @@ import { projects } from "../data/projects.js";
 
 export default function Projects() {
   return (
-    <div className="no-scrollbar overflow-y-auto">
+    <div className="no-scrollbar h-full w-full overflow-y-auto">
       <div className="mx-auto flex max-w-[1400px] flex-col gap-7 px-5 py-10 md:px-10 lg:px-16">
         <div>
           <motion.span

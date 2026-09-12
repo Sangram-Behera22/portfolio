@@ -22,6 +22,7 @@ export const projects = [
   {
     id: "proj-03",
     name: "MyGoalz",
+    type: "Mobile App",
     description:
       "A social media application focused on personal productivity, allowing users to create, track, and accomplish milestones while sharing progress.",
     tech: ["Android", "IOS", "Node.js", "REST APIs", "Firebase"],
