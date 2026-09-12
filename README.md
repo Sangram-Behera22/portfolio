@@ -1,6 +1,23 @@
-# Sangram Behera — Portfolio
+# Sangram Behera - Portfolio
 
-A full-viewport, app-style developer portfolio built with React 19, React Router, Tailwind CSS v4, and Motion (Framer Motion).
+A responsive, app-style developer portfolio built with React 19, Vite, React Router, Tailwind CSS v4, Motion, and Lucide icons.
+
+The site presents Sangram's experience across full-stack development, backend systems, APIs, cloud infrastructure, and performance-focused applications.
+
+## Features
+
+- Routed portfolio sections for home, about, skills, experience, projects, and contact
+- Responsive layout with desktop and mobile navigation
+- Light and dark themes with the preference saved in `localStorage`
+- Animated page transitions and content reveals with Motion
+- Project, skill, experience, and architecture-focused components
+- Contact form delivery through EmailJS
+- Netlify SPA fallback configured in `public/_redirects`
+
+## Requirements
+
+- Node.js 20 or newer
+- npm
 
 ## Getting started
 
@@ -9,51 +26,53 @@ npm install
 npm run dev
 ```
 
-Then open the printed local URL (usually http://localhost:5173).
+Open the local URL printed by Vite, usually `http://localhost:5173`.
 
-## Build for production
+## Available scripts
+
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start the Vite development server |
+| `npm run build` | Create a production build in `dist/` |
+| `npm run preview` | Preview the production build locally |
+| `npm run lint` | Run Oxlint |
+
+## Production deployment
+
+Build the site and deploy the generated `dist/` directory to a static host:
 
 ```bash
 npm run build
-npm run preview   # preview the production build locally
+npm run preview
 ```
 
-The production build is written to `dist/` — deploy that folder to any static host (Vercel, Netlify, Cloudflare Pages, GitHub Pages, S3, etc.).
+The project can be deployed to Netlify, Vercel, Cloudflare Pages, GitHub Pages, or another static hosting provider. Netlify uses `public/_redirects` to route client-side paths back to `index.html`.
 
 ## Project structure
 
-```
+```text
 src/
-├── components/       Navbar, PageTransition, Button, ProjectCard,
-│                     SkillCard, StatCard, ArchitectureDiagram, Terminal
-├── pages/            Home, About, Skills, Experience, Projects,
-│                     Architecture, Contact
-├── data/             projects.js, skills.js, experience.js — edit these
-│                     to update your content without touching components
-├── App.jsx           Routes + page transitions
-├── main.jsx          Entry point
-└── index.css         Tailwind v4 theme tokens (colors, fonts) + base styles
+  components/    Shared UI: navbar, buttons, cards, transitions, terminal, diagram
+  data/          Project, skill, and experience content
+  pages/         Routed portfolio pages
+  App.jsx        Theme state, routes, page transitions, and footer
+  main.jsx       React entry point and BrowserRouter setup
+  index.css      Tailwind theme tokens and global styles
+public/
+  _redirects     Netlify single-page application fallback
 ```
 
-## Customizing
+## Customization
 
-- **Your info**: edit `src/data/projects.js`, `skills.js`, `experience.js`,
-  and the copy directly inside `src/pages/*.jsx`.
-- **Colors / fonts**: all design tokens live in the `@theme` block at the
-  top of `src/index.css` (`--color-*`, `--font-*`). Change them once and
-  every component picks it up automatically via Tailwind utilities like
-  `bg-card`, `text-violet`, `font-display`.
-- **Links**: update the `mailto:`, GitHub, and LinkedIn URLs — footer
-  socials live in `App.jsx`, hero/contact socials live in
-  `src/pages/Contact.jsx`.
-- **Contact form**: currently simulates a successful submission client-side
-  (no backend wired up). Connect it to your form provider of choice
-  (Formspree, Resend, your own API route, etc.) inside the `handleSubmit`
-  function in `src/pages/Contact.jsx`.
+- Update portfolio content in `src/data/projects.js`, `src/data/skills.js`, and `src/data/experience.js`.
+- Update page copy and links in `src/pages/` and the social links in `src/App.jsx`.
+- Change colors and fonts in the `@theme` block at the top of `src/index.css`.
+- Update the EmailJS service, template, and public key in `src/pages/Contact.jsx` when connecting the form to another EmailJS account.
 
-## Notes
+## Contact form
 
-- Desktop treats each route as a full 100vh "screen" with no page scroll;
-  mobile falls back to vertical scroll within a page when content is dense,
-  to keep everything reachable on small viewports.
-- Reduced-motion preference is respected globally.
+The contact form sends two EmailJS requests when submitted: one for the portfolio owner and one for the sender confirmation. EmailJS credentials are currently defined in `src/pages/Contact.jsx`; replace them with the credentials for the deployment's EmailJS account before publishing.
+
+## License
+
+This repository is a personal portfolio. Contact the author before reusing its content, branding, or project information.
