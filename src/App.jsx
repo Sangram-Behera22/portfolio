@@ -54,19 +54,21 @@ export default function App() {
         </AnimatePresence>
       </main>
 
-      <footer className="flex min-h-10 shrink-0  items-center justify-between gap-2 border-t border-border bg-bg-soft px-5 py-3 text-center font-mono text-[10px] text-faint md:h-10 md:flex-row md:justify-between md:px-10 md:py-0 md:text-left md:text-[11px]">
-        <span>© 2026 Sangram Behera</span>
-        <span className="text-muted">~/{label}</span>
-        <div className="flex items-center gap-4">
-          {/* <a href="https://github.com/" target="_blank" rel="noreferrer" className="transition-colors hover:text-ink" aria-label="GitHub">
-            <Github size={13} />
-          </a> */}
-          <a href="https://www.linkedin.com/in/sangram-behera22" target="_blank" rel="noreferrer" className="transition-colors hover:text-ink" aria-label="LinkedIn">
-            <Linkedin size={13} />
-          </a>
-          <a href="mailto:mail.sbsangram@gmail.com" className="transition-colors hover:text-ink" aria-label="Email">
-            <Mail size={13} />
-          </a>
+      <footer className="shrink-0 border-t border-border bg-bg-soft">
+        <div className="mx-auto flex min-h-10 w-full max-w-[1400px] items-center justify-between gap-2 px-5 py-3 text-center font-mono text-[10px] text-faint md:h-10 md:flex-row md:justify-between md:px-10 md:py-0 md:text-left md:text-[11px]">
+          <span>© 2026 Sangram Behera</span>
+          <span className="text-muted">~/{label}</span>
+          <div className="flex items-center gap-4">
+            {/* <a href="https://github.com/" target="_blank" rel="noreferrer" className="transition-colors hover:text-ink" aria-label="GitHub">
+              <Github size={13} />
+            </a> */}
+            <a href="https://www.linkedin.com/in/sangram-behera22" target="_blank" rel="noreferrer" className="transition-colors hover:text-ink" aria-label="LinkedIn">
+              <Linkedin size={13} />
+            </a>
+            <a href="mailto:mail.sbsangram@gmail.com" className="transition-colors hover:text-ink" aria-label="Email">
+              <Mail size={13} />
+            </a>
+          </div>
         </div>
       </footer>
     </div>
