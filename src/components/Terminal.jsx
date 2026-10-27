@@ -4,23 +4,23 @@ import { motion } from "motion/react";
 const LINES = [
   {
     cmd: "whoami",
-    out: "sangram-behera · full-stack developer",
+    out: "sangram-behera · Software Engineer",
   },
   {
     cmd: "node -v",
-    out: "v22.23.2",
+    out: "v22.23.4",
   },
   {
     cmd: "php -v",
-    out: "v8.3.9",
+    out: "v8.4",
   },
   {
     cmd: "cat stack.json",
-    out: '{ "backend": ["Node.js","TypeScript","Fastify","PHP","Laravel"], "db": ["PostgreSQL","Redis","MySQL","MongoDB"] }',
+    out: '{ "backend": ["PHP","Laravel","CodeIgniter","Node.js","Express.js","TypeScript"], "db": ["MySQL","PostgreSQL","MongoDB","Redis"], "testing": ["PHPUnit","Jest","Supertest","Postman"], "cloud": ["AWS","Docker","CI/CD"] }',
   },
   {
     cmd: "git log --oneline -1",
-    out: "8f3a21c refactor: scale API gateway to 10k rps",
+    out: "feat: improve API reliability and performance",
   },
 ];
 
@@ -38,9 +38,7 @@ function Prompt({ children, active = false }) {
       <span className="shrink-0 text-cyan">~</span>
 
       <span
-        className={`min-w-0 break-words ${
-          active ? "text-ink" : "text-muted"
-        }`}
+        className={`min-w-0 break-words ${active ? "text-ink" : "text-muted"}`}
       >
         {children}
       </span>
@@ -205,9 +203,7 @@ export default function Terminal() {
               {cmdText}
 
               {phase === "cmd" && (
-                <span className="ml-0.5 animate-pulse text-violet">
-                  ▍
-                </span>
+                <span className="ml-0.5 animate-pulse text-violet">▍</span>
               )}
             </Prompt>
 
@@ -220,9 +216,7 @@ export default function Terminal() {
                   {outText}
 
                   {phase === "out" && (
-                    <span className="ml-0.5 animate-pulse text-ink/70">
-                      ▍
-                    </span>
+                    <span className="ml-0.5 animate-pulse text-ink/70">▍</span>
                   )}
                 </span>
               </div>
@@ -250,13 +244,9 @@ export default function Terminal() {
         </span>
 
         <div className="flex items-center gap-3">
-          <span className="font-mono text-[9px] text-faint">
-            UTF-8
-          </span>
+          <span className="font-mono text-[9px] text-faint">UTF-8</span>
 
-          <span className="font-mono text-[9px] text-faint">
-            zsh
-          </span>
+          <span className="font-mono text-[9px] text-faint">zsh</span>
         </div>
       </div>
     </motion.div>

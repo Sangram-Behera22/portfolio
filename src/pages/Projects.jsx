@@ -29,7 +29,7 @@ export default function Projects() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="mt-3 max-w-2xl text-[15px] leading-relaxed text-muted"
           >
-            Product-focused work spanning customer-facing platforms, workflow automation, and operational systems built for real business impact.
+            I develop web applications that help businesses manage daily tasks, improve workflows, and solve real business problems.
           </motion.p>
         </div>
 

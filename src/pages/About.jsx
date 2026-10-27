@@ -1,36 +1,54 @@
 import { motion } from "motion/react";
-import { Server, Network, Database, Cloud, Layers, ShieldCheck, Code2 } from "lucide-react";
+import {
+  Server,
+  Network,
+  Database,
+  Cloud,
+  Layers,
+  ShieldCheck,
+  Code2,
+} from "lucide-react";
 import StatCard from "../components/StatCard.jsx";
 
 const SPECIALIZATIONS = [
-  { label: "Backend Engineering", icon: Server },
-  { label: "API Design", icon: Network },
-  { label: "Database Design", icon: Database },
-  { label: "Cloud & DevOps", icon: Cloud },
-  { label: "Full Stack Delivery", icon: Layers },
-  { label: "Secure Systems", icon: ShieldCheck },
+  { label: "PHP & Laravel Development", icon: Code2 },
+  { label: "Node.js & Express.js", icon: Server },
+  { label: "REST API Development", icon: Network },
+  { label: "DB Design & Optimization", icon: Database },
+  { label: "AWS & DevOps", icon: Cloud },
+  { label: "Authentication & Security", icon: ShieldCheck },
 ];
 
 const TECH_STACK = [
-  "JavaScript",
-  "TypeScript",
+  // Backend — Primary
   "PHP",
-  "SQL",
-  "HTML",
-  "CSS",
-  "React",
-  "Angular",
+  "Laravel",
   "Node.js",
   "Express.js",
-  "Laravel",
+  "JavaScript",
+  "TypeScript",
+
+  // Databases
   "MySQL",
+  "PostgreSQL",
   "MongoDB",
   "Redis",
+  "SQL",
+
+  // Cloud & DevOps
   "AWS",
   "Docker",
   "GitHub Actions",
+
+  // Authentication & Security
   "JWT",
   "OAuth 2.0",
+
+  // Frontend
+  "React",
+  "Angular",
+  "HTML",
+  "CSS",
 ];
 
 export default function About() {
@@ -63,15 +81,45 @@ export default function About() {
             className="mt-5 space-y-4 text-[15px] leading-relaxed text-muted"
           >
             <p>
-              I am a <span className="font-medium text-ink">Full Stack Developer with around 4 years of professional experience</span>, with a strong focus on building web applications, backend systems, APIs, databases, and cloud-based applications.
+              I am a{" "}
+              <span className="font-medium text-ink">
+                Software Engineer with 4+ years of professional experience
+              </span>{" "}
+              in developing and maintaining web applications, backend systems,
+              REST APIs, databases, and cloud-based applications.
             </p>
 
             <p>
-              My experience spans both frontend and backend development, though my strongest work is on the <span className="font-medium text-ink">backend side</span>. On the backend, I have worked extensively with <span className="font-medium text-ink">PHP and Laravel</span>, as well as <span className="font-medium text-ink">JavaScript-based backend development using Node.js and Express.js</span>. I’ve designed and developed REST APIs, handled authentication and authorization, integrated third-party services, worked with databases, processed files and forms, and implemented business logic.
+              My main skills are in{" "}
+              <span className="font-medium text-ink">
+                PHP, Laravel, and CodeIgniter
+              </span>
+              . I also have experience with{" "}
+              <span className="font-medium text-ink">
+                Node.js, Express.js, JavaScript, and TypeScript
+              </span>{" "}
+              for backend development. I have worked on REST APIs,
+              authentication, database management, third-party integrations, and
+              business logic. I also focus on writing clean code, fixing issues,
+              and improving application performance.
             </p>
 
             <p>
-              My frontend experience includes <span className="font-medium text-ink">JavaScript, React, Angular, HTML, CSS, Tailwind CSS, jQuery, and AJAX</span>. I’ve worked with component-based frontend development, routing, state management, API integration, responsive UI development, and frontend deployment.
+              I also have experience with{" "}
+              <span className="font-medium text-ink">AWS and DevOps tools</span>
+              , including EC2, S3, SQS, Docker, GitHub Actions, and CI/CD
+              pipelines. I have used these tools to deploy applications and
+              manage server environments.
+            </p>
+
+            <p>
+              My frontend skills include{" "}
+              <span className="font-medium text-ink">
+                React, Angular, JavaScript, HTML, CSS, Tailwind CSS, jQuery, and
+                AJAX
+              </span>
+              . I can build responsive user interfaces and connect them with
+              backend APIs. My main focus, however, is backend development.
             </p>
           </motion.div>
 
@@ -87,7 +135,9 @@ export default function About() {
                 className="flex items-center gap-2 rounded-2xl border border-border bg-card/60 px-3 py-2.5 transition-colors hover:border-violet/40"
               >
                 <Icon size={15} className="shrink-0 text-violet" />
-                <span className="font-mono text-[11.5px] text-muted">{label}</span>
+                <span className="font-mono text-[11.5px] text-muted">
+                  {label}
+                </span>
               </div>
             ))}
           </motion.div>
@@ -117,10 +167,10 @@ export default function About() {
             </div>
 
             <div className="mt-6 grid grid-cols-2 gap-3">
-              <StatCard value="4 yrs" label="Experience" delay={0.1} />
+              <StatCard value="4+ yrs" label="Experience" delay={0.1} />
               <StatCard value="AWS" label="Cloud" delay={0.18} />
-              <StatCard value="20+" label="Projects" delay={0.26} />
-              <StatCard value="Backend" label="Focus" delay={0.34} />
+              <StatCard value="12+" label="Projects" delay={0.26} />
+              <StatCard value="Full Stack" label="Focus" delay={0.34} />
             </div>
           </motion.div>
         </div>

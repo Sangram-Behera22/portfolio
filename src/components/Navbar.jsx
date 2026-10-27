@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "motion/react";
-import { Menu, X, Circle, Sun, Moon } from "lucide-react";
+import { Menu, X, Circle, Sun, Moon, Download } from "lucide-react";
 
 const LINKS = [
   { to: "/about", label: "About" },
@@ -53,6 +53,15 @@ export default function Navbar({ isDark, onToggleTheme }) {
         </nav>
 
         <div className="flex items-center gap-2">
+          {/* <a
+            href="/resume.pdf"
+            download="Sangram-Behera-Resume.pdf"
+            className="inline-flex h-9 items-center gap-1.5 rounded-full border border-border bg-card-soft px-3 font-mono text-[11px] text-ink transition-colors hover:border-violet/50 hover:text-violet"
+          >
+            Resume
+            <Download size={14} />
+          </a> */}
+
           <button
             type="button"
             onClick={onToggleTheme}

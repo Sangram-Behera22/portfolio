@@ -10,10 +10,9 @@ import {
 import Button from "../components/Button.jsx";
 import Terminal from "../components/Terminal.jsx";
 
-
 const HIGHLIGHTS = [
   {
-    label: "Backend-first",
+    label: "Full Stack",
     icon: Layers3,
   },
   {
@@ -47,9 +46,9 @@ export default function Home() {
               {/* Eyebrow */}
               <div className="flex items-center gap-3">
                 {/* <span className="h-px w-7 bg-violet" /> */}
-               
+
                 <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-violet sm:text-xs">
-                  // Full Stack Developer
+                  // Software Engineer
                 </span>
               </div>
 
@@ -84,10 +83,10 @@ export default function Home() {
                 transition={{ duration: 0.5, delay: 0.18 }}
                 className="mt-5 max-w-xl break-words text-[14px] leading-7 text-muted sm:text-[15px]"
               >
-                I&apos;m a backend-oriented full stack developer with around
-                4 years of experience building web applications, REST APIs,
-                databases, authentication systems, and cloud deployments
-                across the full product lifecycle.
+                I&apos;m a Software Engineer with 4+ years of experience
+                building web applications and REST APIs. My main skills are PHP,
+                Laravel, Node.js, and Express.js. I also have experience with
+                databases, authentication, AWS, Docker, and CI/CD.
               </motion.p>
 
               {/* Actions */}
@@ -163,8 +162,6 @@ export default function Home() {
                 color: "var(--color-border)",
               }}
             />
-
-         
 
             {/* Terminal wrapper */}
             <div className="relative z-10 min-w-0 w-full max-w-[590px]">

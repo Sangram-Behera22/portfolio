@@ -31,8 +31,7 @@ export default function Skills() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="mt-2 max-w-xl text-[14px] text-muted"
           >
-            Organized by domain rather than arbitrary percentages — depth
-            shown through what I've actually built with.
+            My skills are grouped by area, based on the technologies I have used and the projects I have worked on.
           </motion.p>
         </div>
 

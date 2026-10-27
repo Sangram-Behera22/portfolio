@@ -30,7 +30,7 @@ export default function Experience() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="mt-3 max-w-2xl text-[15px] leading-relaxed text-muted"
           >
-            Building production-ready software across the full lifecycle — from API design and database modeling to deployment, integration, and operational stability.
+           I build reliable web applications from start to finish, including API development, database design, third-party integrations, deployment, and maintenance.
           </motion.p>
         </div>
 

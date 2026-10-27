@@ -1,6 +1,15 @@
 import { useState } from "react";
 import { motion } from "motion/react";
-import { Mail, Linkedin, Github, Send, Check, Clock3, Sparkles, Server } from "lucide-react";
+import {
+  Mail,
+  Linkedin,
+  Github,
+  Send,
+  Check,
+  Clock3,
+  Sparkles,
+  Server,
+} from "lucide-react";
 import emailjs from "@emailjs/browser";
 
 export default function Contact() {
@@ -58,7 +67,6 @@ export default function Contact() {
 
   return (
     <div className="no-scrollbar h-full w-full overflow-y-auto bg-gradient-to-b from-bg via-bg to-bg/95">
-     
       <div className="mx-auto w-full max-w-[1400px] px-5 py-8 sm:py-10 md:px-10 lg:px-16">
         <div className="grid items-start gap-8 lg:grid-cols-[minmax(0,1.15fr)_minmax(360px,0.85fr)] lg:gap-12 xl:gap-16">
           {/* Left column */}
@@ -69,7 +77,6 @@ export default function Contact() {
               transition={{ duration: 0.4 }}
             >
               <span className="inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.24em] text-violet sm:text-xs">
-               
                 // Contact
               </span>
 
@@ -81,23 +88,21 @@ export default function Contact() {
               </h1>
 
               <p className="mt-5 max-w-xl text-sm leading-7 text-muted sm:text-[15px]">
-                Have a project, opportunity, or idea? Tell me what you&apos;re
-                working on and let&apos;s figure out the best way to build it.
+                Have a project, job opportunity, or idea? Feel free to contact
+                me. I&apos;d be happy to discuss how I can help.
               </p>
 
               <p className="mt-3 max-w-2xl text-[13px] leading-6 text-muted/75 sm:text-sm">
-                I work across full-stack development, backend systems, scalable
-                APIs, cloud infrastructure, and performance-focused
-                applications.
+               I build web applications and backend APIs using PHP, Laravel, Node.js, and Express.js. I also work with databases, AWS, testing, and deployment, along with frontend technologies like JavaScript, CSS, Angular, and React.
               </p>
 
               {/* Expertise */}
               <div className="mt-6 flex max-w-2xl flex-wrap gap-2">
                 {[
-                  ["Full-Stack Development", "violet"],
-                  ["Backend & APIs", "blue"],
-                  ["System Architecture", "cyan"],
-                  ["Cloud Infrastructure", "emerald-400"],
+                  ["PHP & Laravel", "violet"],
+                  ["Node.js & APIs", "blue"],
+                  ["AWS & DevOps", "emerald-400"],
+                  ["Full-Stack Development", "cyan"],
                 ].map(([label, tone]) => (
                   <span
                     key={label}
@@ -160,29 +165,33 @@ export default function Contact() {
                 {
                   icon: Server,
                   title: "Focus",
-                  text: "APIs & backend",
+                  text: "Full-Stack Development",
                   iconClass: "text-violet",
                   bgClass: "bg-violet/10",
                 },
-              ].map(({ icon: Icon, title, text, iconClass, bgClass }, index) => (
-                <motion.div
-                  key={title}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4, delay: 0.15 + index * 0.06 }}
-                  className="group min-w-0 rounded-2xl border border-border/40 bg-card/20 p-3 transition-colors hover:border-border/70 hover:bg-card/35 sm:p-4"
-                >
-                  <div className={`flex h-9 w-9 items-center justify-center rounded-xl ${bgClass}`}>
-                    <Icon size={16} className={iconClass} />
-                  </div>
-                  <p className="mt-3 break-words font-mono text-[8px] uppercase tracking-[0.12em] text-faint sm:mt-4 sm:text-[9px] sm:tracking-[0.16em]">
-                    {title}
-                  </p>
-                  <p className="mt-1 break-words text-[10px] font-medium leading-4 text-ink sm:text-[13px]">
-                    {text}
-                  </p>
-                </motion.div>
-              ))}
+              ].map(
+                ({ icon: Icon, title, text, iconClass, bgClass }, index) => (
+                  <motion.div
+                    key={title}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4, delay: 0.15 + index * 0.06 }}
+                    className="group min-w-0 rounded-2xl border border-border/40 bg-card/20 p-3 transition-colors hover:border-border/70 hover:bg-card/35 sm:p-4"
+                  >
+                    <div
+                      className={`flex h-9 w-9 items-center justify-center rounded-xl ${bgClass}`}
+                    >
+                      <Icon size={16} className={iconClass} />
+                    </div>
+                    <p className="mt-3 break-words font-mono text-[8px] uppercase tracking-[0.12em] text-faint sm:mt-4 sm:text-[9px] sm:tracking-[0.16em]">
+                      {title}
+                    </p>
+                    <p className="mt-1 break-words text-[10px] font-medium leading-4 text-ink sm:text-[13px]">
+                      {text}
+                    </p>
+                  </motion.div>
+                ),
+              )}
             </div>
           </div>
 
@@ -190,7 +199,11 @@ export default function Contact() {
           <motion.div
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
+            transition={{
+              duration: 0.5,
+              delay: 0.12,
+              ease: [0.22, 1, 0.36, 1],
+            }}
             className="lg:sticky lg:top-8"
           >
             {sent ? (
@@ -223,10 +236,11 @@ export default function Contact() {
                     Send a message
                   </p>
                   <h2 className="mt-2 font-display text-xl font-semibold text-ink sm:text-2xl">
-                    Start a conversation.
+                  Let&apos;s talk.
                   </h2>
                   <p className="mt-2 text-xs leading-5 text-muted">
-                    Share a few details and I&apos;ll get back to you.
+                    Share your message, project details, or job opportunity.
+                    I&apos;ll get back to you soon.
                   </p>
                 </div>
 
@@ -243,7 +257,9 @@ export default function Contact() {
                       name="name"
                       required
                       value={form.name}
-                      onChange={(e) => setForm({ ...form, name: e.target.value })}
+                      onChange={(e) =>
+                        setForm({ ...form, name: e.target.value })
+                      }
                       placeholder="Your name"
                       className="h-12 w-full rounded-xl border border-border-soft bg-bg-soft/50 px-4 text-sm text-ink outline-none transition-all placeholder:text-faint focus:border-violet/60 focus:bg-bg-soft/80 focus:ring-4 focus:ring-violet/10"
                     />
@@ -262,7 +278,9 @@ export default function Contact() {
                       required
                       type="email"
                       value={form.email}
-                      onChange={(e) => setForm({ ...form, email: e.target.value })}
+                      onChange={(e) =>
+                        setForm({ ...form, email: e.target.value })
+                      }
                       placeholder="you@example.com"
                       className="h-12 w-full rounded-xl border border-border-soft bg-bg-soft/50 px-4 text-sm text-ink outline-none transition-all placeholder:text-faint focus:border-violet/60 focus:bg-bg-soft/80 focus:ring-4 focus:ring-violet/10"
                     />
@@ -281,8 +299,10 @@ export default function Contact() {
                       required
                       rows={5}
                       value={form.message}
-                      onChange={(e) => setForm({ ...form, message: e.target.value })}
-                      placeholder="Tell me about your project, role, or idea..."
+                      onChange={(e) =>
+                        setForm({ ...form, message: e.target.value })
+                      }
+                      placeholder="Tell me about your project or job opportunity..."
                       className="w-full resize-none rounded-xl border border-border-soft bg-bg-soft/50 px-4 py-3 text-sm leading-6 text-ink outline-none transition-all placeholder:text-faint focus:border-violet/60 focus:bg-bg-soft/80 focus:ring-4 focus:ring-violet/10"
                     />
                   </div>
