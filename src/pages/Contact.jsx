@@ -93,16 +93,18 @@ export default function Contact() {
               </p>
 
               <p className="mt-3 max-w-2xl text-[13px] leading-6 text-muted/75 sm:text-sm">
-               I build web applications and backend APIs using PHP, Laravel, Node.js, and Express.js. I also work with databases, AWS, testing, and deployment, along with frontend technologies like JavaScript, CSS, Angular, and React.
+                I build scalable backend systems and REST APIs with Node.js,
+                Express.js, TypeScript, PostgreSQL, Redis, and Angular, while
+                deploying reliable services on AWS with Docker and CI/CD.
               </p>
 
               {/* Expertise */}
               <div className="mt-6 flex max-w-2xl flex-wrap gap-2">
                 {[
-                  ["PHP & Laravel", "violet"],
-                  ["Node.js & APIs", "blue"],
+                  ["Node.js & APIs", "violet"],
+                  ["Angular Frontend", "blue"],
                   ["AWS & DevOps", "emerald-400"],
-                  ["Full-Stack Development", "cyan"],
+                  ["Security & Scalability", "cyan"],
                 ].map(([label, tone]) => (
                   <span
                     key={label}

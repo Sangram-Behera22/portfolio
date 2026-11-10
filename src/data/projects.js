@@ -1,61 +1,41 @@
 export const projects = [
-    {
+  {
     id: "proj-01",
-    name: "The Global Scholarship",
+    name: "MyGoalz",
+    type: "Social & Chat Application",
     description:
-      "A dedicated scholarship portal connecting students with educational funding opportunities through a centralized, searchable database.",
-    tech: ["PHP", "Codeigniter", "MySQL", "Bootstrap"],
+      "A social and chat platform for user onboarding, registration, chat modules, and real-time interactions with secure backend services.",
+    tech: ["Node.js", "Express.js", "PostgreSQL", "Sequelize", "Redis", "Socket.IO"],
     demo: "#",
     github: "#",
     accent: "blue",
   },
   {
     id: "proj-02",
-    name: "RingCompany",
+    name: "HealthMeu",
     description:
-      "An e-commerce platform allowing customers to design custom rings, featuring a robust admin panel to manage orders and the complete design pipeline.",
-    tech: ["Laravel", "PHP", "MySQL", "TypeScript", "Angular"],
+      "A healthcare ERP and pathology lab platform for managing tests, nested subtests, reports, and lab operations with a scalable backend.",
+    tech: ["Node.js", "PostgreSQL", "Redis", "TypeScript", "Docker"],
     demo: "#",
     github: "#",
     accent: "violet",
   },
   {
     id: "proj-03",
-    name: "Orican System",
+    name: "MedMeu",
     description:
-      "A comprehensive CRM system designed to streamline printer sales and manage end-to-end service and maintenance workflows.",
-    tech: ["PHP", "Laravel", "MySQL","Bootstrap"],
-    demo: "#",
-    github: "#",
-    accent: "blue",
-  },
-  {
-    id: "proj-04",
-    name: "MyGoalz",
-    type: "Mobile App",
-    description:
-      "A social media application focused on personal productivity, allowing users to create, track, and accomplish milestones while sharing progress.",
-    tech: ["Android", "IOS", "Node.js","Express.js", "Websocket", "Firebase", "Redis"],
+      "A healthcare e-commerce platform focused on selling healthcare products with reliable order workflows and backend data handling.",
+    tech: ["Node.js", "MySQL", "Redis", "Express.js", "REST APIs"],
     demo: "#",
     github: "#",
     accent: "cyan",
   },
   {
-    id: "proj-05",
-    name: "HealthMeu",
+    id: "proj-04",
+    name: "ACCRM",
     description:
-      "A healthcare Enterprise Resource Planning (ERP) system built to manage hospital operations, patient records, and clinical workflows.",
-    tech: ["Node.js", "Express.js", "Redis", "PostgreSQL", "Docker", "React"],
-    demo: "#",
-    github: "#",
-    accent: "violet",
-  },
-  {
-    id: "proj-06",
-    name: "Akshita Scans",
-    description:
-      "A Pathology Lab Management System built to manage patient registration, medical history, referring doctor details, invoices, billing, and daily laboratory operations.",
-    tech: ["PHP", "Laravel", "MySQL","Bootstrap"],
+      "A retail CRM and business management system for customer and admin workflows, role-based access, API documentation, and CI/CD deployment.",
+    tech: ["Node.js", "Express.js", "RBAC", "Swagger", "GitHub Actions", "AWS EC2"],
     demo: "#",
     github: "#",
     accent: "violet",

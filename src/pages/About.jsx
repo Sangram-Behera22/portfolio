@@ -11,44 +11,36 @@ import {
 import StatCard from "../components/StatCard.jsx";
 
 const SPECIALIZATIONS = [
-  { label: "PHP & Laravel Development", icon: Code2 },
-  { label: "Node.js & Express.js", icon: Server },
+  { label: "Node.js & TypeScript", icon: Code2 },
   { label: "REST API Development", icon: Network },
-  { label: "DB Design & Optimization", icon: Database },
+  { label: "Database Design", icon: Database },
   { label: "AWS & DevOps", icon: Cloud },
   { label: "Authentication & Security", icon: ShieldCheck },
+  { label: "Angular Frontend", icon: Server },
 ];
 
 const TECH_STACK = [
-  // Backend — Primary
-  "PHP",
-  "Laravel",
   "Node.js",
   "Express.js",
-  "JavaScript",
+  "Fastify",
   "TypeScript",
-
-  // Databases
-  "MySQL",
+  "JavaScript (ES6+)",
   "PostgreSQL",
+  "MySQL",
   "MongoDB",
   "Redis",
-  "SQL",
-
-  // Cloud & DevOps
+  "Apache Kafka",
+  "Angular",
+  "RxJS",
+  "NgRx",
+  "JWT",
+  "OAuth",
   "AWS",
   "Docker",
+  "Kubernetes",
   "GitHub Actions",
-
-  // Authentication & Security
-  "JWT",
-  "OAuth 2.0",
-
-  // Frontend
-  "React",
-  "Angular",
-  "HTML",
-  "CSS",
+  "Jenkins",
+  "CI/CD",
 ];
 
 export default function About() {
@@ -85,41 +77,37 @@ export default function About() {
               <span className="font-medium text-ink">
                 Software Engineer with 4+ years of professional experience
               </span>{" "}
-              in developing and maintaining web applications, backend systems,
-              REST APIs, databases, and cloud-based applications.
+              in building and maintaining web applications, backend systems,
+              REST APIs, cloud services, and data-intensive business workflows.
             </p>
 
             <p>
-              My main skills are in{" "}
+              My core strengths are in{" "}
               <span className="font-medium text-ink">
-                PHP, Laravel, and CodeIgniter
+                Node.js, Express.js, TypeScript, REST APIs, PostgreSQL, and
+                Redis
               </span>
-              . I also have experience with{" "}
-              <span className="font-medium text-ink">
-                Node.js, Express.js, JavaScript, and TypeScript
-              </span>{" "}
-              for backend development. I have worked on REST APIs,
-              authentication, database management, third-party integrations, and
-              business logic. I also focus on writing clean code, fixing issues,
-              and improving application performance.
+              . I design APIs, manage backend architecture, optimize database
+              queries, and implement secure access patterns for production-grade
+              applications.
             </p>
 
             <p>
-              I also have experience with{" "}
-              <span className="font-medium text-ink">AWS and DevOps tools</span>
-              , including EC2, S3, SQS, Docker, GitHub Actions, and CI/CD
-              pipelines. I have used these tools to deploy applications and
-              manage server environments.
-            </p>
-
-            <p>
-              My frontend skills include{" "}
+              I also work across the deployment lifecycle with{" "}
               <span className="font-medium text-ink">
-                React, Angular, JavaScript, HTML, CSS, Tailwind CSS, jQuery, and
-                AJAX
+                AWS, Docker, Kubernetes, Linux, GitHub Actions, and CI/CD
               </span>
-              . I can build responsive user interfaces and connect them with
-              backend APIs. My main focus, however, is backend development.
+              , helping teams ship and maintain services reliably in real-world
+              environments.
+            </p>
+
+            <p>
+              On the frontend, I use{" "}
+              <span className="font-medium text-ink">
+                Angular, RxJS, NgRx, HTML5, and CSS3
+              </span>
+              , combining responsive interfaces with strong API integration and a
+              clean user experience.
             </p>
           </motion.div>
 

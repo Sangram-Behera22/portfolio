@@ -11,12 +11,12 @@ const LINES = [
     out: "v22.23.4",
   },
   {
-    cmd: "php -v",
-    out: "v8.4",
+    cmd: "node -p \"process.version\"",
+    out: "v22.23.4",
   },
   {
     cmd: "cat stack.json",
-    out: '{ "backend": ["PHP","Laravel","CodeIgniter","Node.js","Express.js","TypeScript"], "db": ["MySQL","PostgreSQL","MongoDB","Redis"], "testing": ["PHPUnit","Jest","Supertest","Postman"], "cloud": ["AWS","Docker","CI/CD"] }',
+    out: '{ "backend": ["Node.js","Express.js","TypeScript","Fastify","NestJS"], "db": ["PostgreSQL","MySQL","MongoDB","Redis","Kafka"], "frontend": ["Angular","RxJS","NgRx"], "cloud": ["AWS","Docker","Kubernetes","GitHub Actions"] }',
   },
   {
     cmd: "git log --oneline -1",

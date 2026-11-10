@@ -61,7 +61,7 @@ export default function Home() {
               >
                 Sangram
                 <br />
-                <span className="bg-gradient-to-r from-violet via-blue to-cyan bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-[#450A0A] via-[#B91C1C] to-[#FB7185] bg-clip-text text-transparent">
                   Behera
                 </span>
               </motion.h1>
@@ -83,10 +83,10 @@ export default function Home() {
                 transition={{ duration: 0.5, delay: 0.18 }}
                 className="mt-5 max-w-xl break-words text-[14px] leading-7 text-muted sm:text-[15px]"
               >
-                I&apos;m a Software Engineer with 4+ years of experience
-                building web applications and REST APIs. My main skills are PHP,
-                Laravel, Node.js, and Express.js. I also have experience with
-                databases, authentication, AWS, Docker, and CI/CD.
+                I&apos;m a Software Engineer with 4+ years of experience building
+                reliable backend systems, REST APIs, and cloud-ready applications.
+                My core stack includes Node.js, Express.js, TypeScript,
+                PostgreSQL, Redis, Angular, AWS, Docker, and CI/CD.
               </motion.p>
 
               {/* Actions */}
